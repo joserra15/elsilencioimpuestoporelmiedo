@@ -1,0 +1,5 @@
+# Permite servir la web como sitio estático en GitHub Pages
+# https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
+
+# No build step required — serve from root
+# index.html is the entry point

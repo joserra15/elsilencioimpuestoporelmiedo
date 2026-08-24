@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600" width="400" height="600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e8dfd0"/>
+      <stop offset="50%" style="stop-color:#d4c4a8"/>
+      <stop offset="100%" style="stop-color:#c4b498"/>
+    </linearGradient>
+    <linearGradient id="red" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#a82020"/>
+      <stop offset="100%" style="stop-color:#6b1212"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.3"/>
+    </filter>
+    <pattern id="paper" patternUnits="userSpaceOnUse" width="20" height="20">
+      <rect width="20" height="20" fill="#d4c4a8" opacity="0.3"/>
+      <circle cx="10" cy="10" r="0.5" fill="#8b7355" opacity="0.1"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="600" fill="url(#bg)"/>
+  <rect width="400" height="600" fill="url(#paper)" opacity="0.5"/>
+
+  <!-- Decorative handwriting lines -->
+  <g opacity="0.08" fill="none" stroke="#4a3728" stroke-width="0.5">
+    <path d="M30 180 Q80 175 130 180 T230 180 T330 180"/>
+    <path d="M30 190 Q80 185 130 190 T230 190 T330 190"/>
+    <path d="M30 200 Q80 195 130 200 T230 200 T330 200"/>
+    <path d="M30 210 Q80 205 130 210 T230 210 T330 210"/>
+  </g>
+
+  <!-- Title area -->
+  <text x="200" y="55" text-anchor="middle" font-family="Georgia, serif" font-size="22" font-weight="600" fill="#2c1810" letter-spacing="3">EL SILENCIO</text>
+  <text x="200" y="82" text-anchor="middle" font-family="Georgia, serif" font-size="22" font-weight="600" fill="#2c1810" letter-spacing="3">IMPUESTO POR EL</text>
+  <text x="200" y="130" text-anchor="middle" font-family="Georgia, serif" font-size="52" font-weight="700" fill="url(#red)" letter-spacing="4" filter="url(#shadow)">MIEDO</text>
+
+  <!-- Decorative flourish -->
+  <path d="M170 145 Q200 155 230 145" fill="none" stroke="#c4a35a" stroke-width="1.5"/>
+  <circle cx="200" cy="150" r="3" fill="#c4a35a"/>
+
+  <!-- Subtitle -->
+  <text x="200" y="172" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#4a3728" letter-spacing="1">BIOGRAF&#205;A DE LA FAMILIA</text>
+  <text x="200" y="186" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#4a3728" letter-spacing="1">DE LOS COLCHONES</text>
+
+  <!-- Portrait silhouettes area -->
+  <rect x="60" y="210" width="130" height="160" rx="2" fill="#3d4a5c" opacity="0.7"/>
+  <rect x="210" y="220" width="130" height="150" rx="2" fill="#5c4a3a" opacity="0.7"/>
+
+  <!-- Woman silhouette hint -->
+  <ellipse cx="125" cy="280" rx="25" ry="30" fill="#2c3540"/>
+  <rect x="100" y="310" width="50" height="55" rx="5" fill="#2c3540"/>
+  <rect x="95" y="320" width="60" height="8" fill="#f5f0e6" opacity="0.6"/>
+
+  <!-- Man silhouette hint -->
+  <ellipse cx="275" cy="275" rx="22" ry="26" fill="#3d3028"/>
+  <rect x="255" y="300" width="40" height="50" rx="4" fill="#4a3d30"/>
+
+  <!-- Bottom scene - path to prison -->
+  <rect x="0" y="420" width="400" height="180" fill="#2c1810" opacity="0.15"/>
+  
+  <!-- Fence -->
+  <g stroke="#2c1810" stroke-width="1" opacity="0.4">
+    <line x1="30" y1="480" x2="30" y2="560"/>
+    <line x1="50" y1="475" x2="50" y2="565"/>
+    <line x1="70" y1="480" x2="70" y2="560"/>
+    <line x1="30" y1="490" x2="70" y2="490"/>
+    <line x1="30" y1="510" x2="70" y2="510"/>
+    <line x1="30" y1="530" x2="70" y2="530"/>
+    <line x1="30" y1="550" x2="70" y2="550"/>
+  </g>
+
+  <!-- Prison building -->
+  <rect x="250" y="440" width="120" height="80" fill="#3d3530" opacity="0.6"/>
+  <g fill="#4a4540" opacity="0.5">
+    <rect x="260" y="450" width="12" height="15" rx="1"/>
+    <rect x="278" y="450" width="12" height="15" rx="1"/>
+    <rect x="296" y="450" width="12" height="15" rx="1"/>
+    <rect x="314" y="450" width="12" height="15" rx="1"/>
+    <rect x="332" y="450" width="12" height="15" rx="1"/>
+    <rect x="350" y="450" width="12" height="15" rx="1"/>
+    <rect x="260" y="475" width="12" height="15" rx="1"/>
+    <rect x="278" y="475" width="12" height="15" rx="1"/>
+    <rect x="296" y="475" width="12" height="15" rx="1"/>
+    <rect x="314" y="475" width="12" height="15" rx="1"/>
+    <rect x="332" y="475" width="12" height="15" rx="1"/>
+    <rect x="350" y="475" width="12" height="15" rx="1"/>
+  </g>
+
+  <!-- Cross -->
+  <g transform="translate(180, 530)" opacity="0.7">
+    <rect x="-2" y="-25" width="4" height="35" fill="#2c1810"/>
+    <rect x="-10" y="-18" width="20" height="4" fill="#2c1810"/>
+  </g>
+
+  <!-- Walking figure -->
+  <ellipse cx="200" cy="500" rx="6" ry="8" fill="#2c1810" opacity="0.5"/>
+  <rect x="196" y="508" width="8" height="20" rx="2" fill="#2c1810" opacity="0.5"/>
+
+  <!-- Path -->
+  <path d="M180 560 Q200 520 220 480 Q240 460 280 450" fill="none" stroke="#5c4a3a" stroke-width="8" opacity="0.3"/>
+
+  <!-- Author name -->
+  <text x="200" y="575" text-anchor="middle" font-family="Georgia, serif" font-size="8" fill="#4a3728" letter-spacing="1">MAR&#205;A EUGENIA D&#205;AZ MALAGUILLA EXP&#211;SITO</text>
+
+  <!-- Bottom flourish -->
+  <path d="M185 582 Q200 588 215 582" fill="none" stroke="#c4a35a" stroke-width="1"/>
+</svg>

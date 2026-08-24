@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600" width="400" height="600">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e8dfd0"/>
+      <stop offset="50%" style="stop-color:#d4c4a8"/>
+      <stop offset="100%" style="stop-color:#b8a888"/>
+    </linearGradient>
+    <radialGradient id="vignette" cx="50%" cy="50%" r="70%">
+      <stop offset="60%" style="stop-color:#000;stop-opacity:0"/>
+      <stop offset="100%" style="stop-color:#000;stop-opacity:0.4"/>
+    </radialGradient>
+    <pattern id="damask" patternUnits="userSpaceOnUse" width="40" height="40">
+      <path d="M20 0 Q30 10 20 20 Q10 10 20 0" fill="#8b7355" opacity="0.04"/>
+    </pattern>
+  </defs>
+
+  <rect width="400" height="600" fill="url(#bg2)"/>
+  <rect width="400" height="600" fill="url(#damask)"/>
+  <rect width="400" height="600" fill="url(#vignette)"/>
+
+  <g font-family="Georgia, serif" fill="#2c1810">
+    <text x="200" y="45" text-anchor="middle" font-size="10.5" opacity="0.9">
+      <tspan x="200" dy="0">Ese mismo silencio que, desde aquella ma&#241;ana</tspan>
+      <tspan x="200" dy="16">del 6 de febrero de 1941, acompa&#241;ar&#237;a para</tspan>
+      <tspan x="200" dy="16">siempre a la familia de Los Colchones.</tspan>
+    </text>
+
+    <text x="200" y="110" text-anchor="middle" font-size="10.5" opacity="0.9">
+      <tspan x="200" dy="0">Porque hay muertes que terminan con una vida,</tspan>
+      <tspan x="200" dy="16">y otras que dejan una ausencia capaz de</tspan>
+      <tspan x="200" dy="16">atravesar generaciones enteras.</tspan>
+    </text>
+
+    <text x="200" y="175" text-anchor="middle" font-size="10.5" opacity="0.9">
+      <tspan x="200" dy="0">Alejandro cay&#243; aquella madrugada bajo las balas</tspan>
+      <tspan x="200" dy="16">de un r&#233;gimen que quiso borrar su nombre de la</tspan>
+      <tspan x="200" dy="16">historia. Sin embargo, no pudo borrarlo del</tspan>
+      <tspan x="200" dy="16">recuerdo que dej&#243; en quienes lo amaron.</tspan>
+    </text>
+
+    <text x="200" y="255" text-anchor="middle" font-size="10.5" opacity="0.9">
+      <tspan x="200" dy="0">Mientras alguien pronunciara su nombre, alg&#250;n</tspan>
+      <tspan x="200" dy="16">descendiente se preguntara por qu&#233; llevaba el</tspan>
+      <tspan x="200" dy="16">nombre de Alejandro, mientras una madre siguiera</tspan>
+      <tspan x="200" dy="16">esperando en el umbral de su casa, o un sobrino</tspan>
+      <tspan x="200" dy="16">preguntara qui&#233;n fue aquel joven electricista de</tspan>
+      <tspan x="200" dy="16">22 a&#241;os, Alejandro seguir&#225; viviendo.</tspan>
+    </text>
+
+    <text x="200" y="365" text-anchor="middle" font-size="10.5" opacity="0.9">
+      <tspan x="200" dy="0">Porque los hombres mueren solo una vez. El olvido,</tspan>
+      <tspan x="200" dy="16">en cambio, solo vence cuando deja de contarse</tspan>
+      <tspan x="200" dy="16">su historia.</tspan>
+    </text>
+
+    <text x="200" y="420" text-anchor="middle" font-size="10.5" font-style="italic" font-weight="600" opacity="0.95">
+      <tspan x="200" dy="0">Y esa ma&#241;ana, junto a la tapia de un cementerio,</tspan>
+      <tspan x="200" dy="16">no termin&#243; &#250;nicamente su vida. Comenz&#243; una</tspan>
+      <tspan x="200" dy="16">memoria que ya nunca podr&#225; ser fusilada.</tspan>
+    </text>
+  </g>
+
+  <rect x="0" y="480" width="400" height="120" fill="#2c1810" opacity="0.1"/>
+  <rect x="30" y="500" width="80" height="90" rx="2" fill="#3d4a5c" opacity="0.5"/>
+  <ellipse cx="70" cy="535" rx="15" ry="18" fill="#2c3540" opacity="0.7"/>
+  <rect x="290" y="505" width="80" height="85" rx="2" fill="#5c4a3a" opacity="0.5"/>
+  <ellipse cx="330" cy="535" rx="14" ry="16" fill="#3d3028" opacity="0.7"/>
+  <rect x="160" y="510" width="80" height="50" fill="#3d3530" opacity="0.4"/>
+  <g fill="#4a4540" opacity="0.3">
+    <rect x="168" y="518" width="8" height="10"/>
+    <rect x="180" y="518" width="8" height="10"/>
+    <rect x="192" y="518" width="8" height="10"/>
+    <rect x="204" y="518" width="8" height="10"/>
+    <rect x="216" y="518" width="8" height="10"/>
+    <rect x="228" y="518" width="8" height="10"/>
+  </g>
+  <ellipse cx="200" cy="545" rx="4" ry="5" fill="#2c1810" opacity="0.4"/>
+  <rect x="198" y="550" width="4" height="12" fill="#2c1810" opacity="0.4"/>
+  <g transform="translate(330, 575)" opacity="0.5">
+    <rect x="-1.5" y="-12" width="3" height="18" fill="#2c1810"/>
+    <rect x="-6" y="-8" width="12" height="3" fill="#2c1810"/>
+  </g>
+  <g stroke="#2c1810" stroke-width="1.5" opacity="0.3">
+    <line x1="0" y1="595" x2="400" y2="595"/>
+    <line x1="20" y1="585" x2="20" y2="600"/>
+    <line x1="40" y1="585" x2="40" y2="600"/>
+    <line x1="60" y1="585" x2="60" y2="600"/>
+    <line x1="80" y1="585" x2="80" y2="600"/>
+    <line x1="100" y1="585" x2="100" y2="600"/>
+    <line x1="120" y1="585" x2="120" y2="600"/>
+    <line x1="140" y1="585" x2="140" y2="600"/>
+    <line x1="160" y1="585" x2="160" y2="600"/>
+    <line x1="180" y1="585" x2="180" y2="600"/>
+    <line x1="200" y1="585" x2="200" y2="600"/>
+    <line x1="220" y1="585" x2="220" y2="600"/>
+    <line x1="240" y1="585" x2="240" y2="600"/>
+    <line x1="260" y1="585" x2="260" y2="600"/>
+    <line x1="280" y1="585" x2="280" y2="600"/>
+    <line x1="300" y1="585" x2="300" y2="600"/>
+    <line x1="320" y1="585" x2="320" y2="600"/>
+    <line x1="340" y1="585" x2="340" y2="600"/>
+    <line x1="360" y1="585" x2="360" y2="600"/>
+    <line x1="380" y1="585" x2="380" y2="600"/>
+  </g>
+</svg>
