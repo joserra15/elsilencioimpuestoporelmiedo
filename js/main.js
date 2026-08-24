@@ -4,8 +4,27 @@
   const header = document.getElementById('site-header');
   const navToggle = document.querySelector('.nav-toggle');
   const navMenu = document.getElementById('nav-menu');
+  const navBackdrop = document.getElementById('nav-backdrop');
   const navLinks = document.querySelectorAll('.nav-menu a');
   const sections = document.querySelectorAll('section[id]');
+
+  function closeMenu() {
+    navToggle.setAttribute('aria-expanded', 'false');
+    navMenu.classList.remove('open');
+    navBackdrop.classList.remove('visible');
+    navBackdrop.hidden = true;
+    document.body.style.overflow = '';
+  }
+
+  function openMenu() {
+    navToggle.setAttribute('aria-expanded', 'true');
+    navMenu.classList.add('open');
+    navBackdrop.hidden = false;
+    requestAnimationFrame(function () {
+      navBackdrop.classList.add('visible');
+    });
+    document.body.style.overflow = 'hidden';
+  }
 
   /* Header scroll effect */
   function handleScroll() {
@@ -22,18 +41,25 @@
   /* Mobile menu toggle */
   navToggle.addEventListener('click', function () {
     const expanded = navToggle.getAttribute('aria-expanded') === 'true';
-    navToggle.setAttribute('aria-expanded', !expanded);
-    navMenu.classList.toggle('open');
-    document.body.style.overflow = expanded ? '' : 'hidden';
+    if (expanded) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
   });
+
+  navBackdrop.addEventListener('click', closeMenu);
 
   /* Close menu on link click */
   navLinks.forEach(function (link) {
-    link.addEventListener('click', function () {
-      navToggle.setAttribute('aria-expanded', 'false');
-      navMenu.classList.remove('open');
-      document.body.style.overflow = '';
-    });
+    link.addEventListener('click', closeMenu);
+  });
+
+  /* Close menu on resize to desktop */
+  window.addEventListener('resize', function () {
+    if (window.innerWidth > 768) {
+      closeMenu();
+    }
   });
 
   /* Active nav link on scroll */
