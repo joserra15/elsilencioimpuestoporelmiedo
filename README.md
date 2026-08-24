@@ -23,12 +23,7 @@ Visita [http://localhost:8080](http://localhost:8080).
 
 ## Imágenes del libro
 
-Las portadas actuales son representaciones SVG. Para usar las imágenes originales del libro, sustituye estos archivos en `assets/images/`:
-
-- `portada.svg` → `portada.jpg` (o `.png`)
-- `contraportada.svg` → `contraportada.jpg` (o `.png`)
-
-Actualiza las rutas en `index.html` si cambias la extensión.
+Las portadas están en `assets/images/portada.jpg` y `assets/images/contraportada.jpg`.
 
 ## Despliegue
 
