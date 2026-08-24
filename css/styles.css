@@ -787,17 +787,6 @@ a:hover {
   border-left-color: var(--color-red);
 }
 
-.review-card-featured {
-  grid-column: span 2;
-  background: linear-gradient(135deg, var(--color-brown) 0%, var(--color-brown-soft) 100%);
-  border-left-color: var(--color-gold);
-}
-
-.review-card-featured blockquote p {
-  color: var(--color-parchment);
-  font-size: 1.1rem;
-}
-
 .review-card blockquote {
   border: none;
   margin: 0;
@@ -952,10 +941,6 @@ a:hover {
 
   .author-accent {
     position: static;
-  }
-
-  .review-card-featured {
-    grid-column: span 1;
   }
 }
 
