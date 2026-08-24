@@ -3,30 +3,34 @@
 
   const header = document.getElementById('site-header');
   const navToggle = document.querySelector('.nav-toggle');
-  const navMenu = document.getElementById('nav-menu');
-  const navBackdrop = document.getElementById('nav-backdrop');
+  const siteNav = document.getElementById('site-nav');
   const navLinks = document.querySelectorAll('.nav-menu a');
   const sections = document.querySelectorAll('section[id]');
 
   function closeMenu() {
     navToggle.setAttribute('aria-expanded', 'false');
-    navMenu.classList.remove('open');
-    navBackdrop.classList.remove('visible');
-    navBackdrop.hidden = true;
+    siteNav.classList.remove('is-open');
+    siteNav.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('menu-open');
     document.body.style.overflow = '';
   }
 
   function openMenu() {
     navToggle.setAttribute('aria-expanded', 'true');
-    navMenu.classList.add('open');
-    navBackdrop.hidden = false;
-    requestAnimationFrame(function () {
-      navBackdrop.classList.add('visible');
-    });
+    siteNav.classList.add('is-open');
+    siteNav.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('menu-open');
     document.body.style.overflow = 'hidden';
   }
 
-  /* Header scroll effect */
+  function toggleMenu() {
+    if (navToggle.getAttribute('aria-expanded') === 'true') {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  }
+
   function handleScroll() {
     if (window.scrollY > 50) {
       header.classList.add('scrolled');
@@ -38,31 +42,30 @@
   window.addEventListener('scroll', handleScroll, { passive: true });
   handleScroll();
 
-  /* Mobile menu toggle */
-  navToggle.addEventListener('click', function () {
-    const expanded = navToggle.getAttribute('aria-expanded') === 'true';
-    if (expanded) {
+  navToggle.addEventListener('click', function (event) {
+    event.preventDefault();
+    event.stopPropagation();
+    toggleMenu();
+  });
+
+  navLinks.forEach(function (link) {
+    link.addEventListener('click', function () {
       closeMenu();
-    } else {
-      openMenu();
+    });
+  });
+
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      closeMenu();
     }
   });
 
-  navBackdrop.addEventListener('click', closeMenu);
-
-  /* Close menu on link click */
-  navLinks.forEach(function (link) {
-    link.addEventListener('click', closeMenu);
-  });
-
-  /* Close menu on resize to desktop */
   window.addEventListener('resize', function () {
     if (window.innerWidth > 768) {
       closeMenu();
     }
   });
 
-  /* Active nav link on scroll */
   function updateActiveLink() {
     const scrollPos = window.scrollY + 100;
 
@@ -84,7 +87,6 @@
 
   window.addEventListener('scroll', updateActiveLink, { passive: true });
 
-  /* Fade-in on scroll */
   const fadeElements = document.querySelectorAll(
     '.section-header, .book-layout, .dedication, .purchase-card, .stores-list, .author-content, .review-card'
   );
@@ -109,7 +111,6 @@
     observer.observe(el);
   });
 
-  /* Stagger review cards */
   document.querySelectorAll('.review-card').forEach(function (card, index) {
     card.style.transitionDelay = (index * 0.08) + 's';
   });
