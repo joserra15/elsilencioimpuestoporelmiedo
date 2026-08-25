@@ -795,6 +795,117 @@ a:hover {
 }
 
 /* =============================================
+   Medios de comunicación
+   ============================================= */
+
+.section-media {
+  background:
+    linear-gradient(135deg, rgba(44, 24, 16, 0.03) 0%, transparent 50%),
+    var(--color-parchment-dark);
+}
+
+.media-list {
+  list-style: none;
+  display: grid;
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.media-card {
+  display: flex;
+  gap: 1.75rem;
+  padding: 2rem;
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(139, 115, 85, 0.15);
+  color: inherit;
+  text-decoration: none;
+  transition: all var(--transition);
+}
+
+.media-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(139, 115, 85, 0.3);
+  color: inherit;
+}
+
+.media-logo {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  padding: 1rem;
+  background: var(--color-parchment);
+  border-radius: var(--radius-md);
+}
+
+.media-logo img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.media-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.media-source {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: 0.5rem;
+}
+
+.media-info h3 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-brown);
+  line-height: 1.35;
+  margin-bottom: 0.75rem;
+}
+
+.media-description {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  margin-bottom: 0.75rem;
+  line-height: 1.65;
+}
+
+.media-date {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  margin-bottom: 1rem;
+}
+
+.media-link-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-red);
+}
+
+.media-link-label::after {
+  content: '→';
+  transition: transform var(--transition);
+}
+
+.media-card:hover .media-link-label::after {
+  transform: translateX(4px);
+}
+
+/* =============================================
    Opiniones
    ============================================= */
 
@@ -1125,6 +1236,17 @@ a:hover {
 
   .stores-list {
     grid-template-columns: 1fr;
+  }
+
+  .media-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .media-logo {
+    width: 100%;
+    max-width: 220px;
+    margin: 0 auto;
   }
 
   .reviews-grid {
