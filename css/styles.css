@@ -1336,6 +1336,10 @@ a:hover {
     margin: 0 auto;
   }
 
+  .presentation-poster img {
+    max-width: 280px;
+  }
+
   .hero-text {
     order: 1;
   }
