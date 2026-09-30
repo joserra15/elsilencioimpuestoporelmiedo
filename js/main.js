@@ -114,4 +114,55 @@
   document.querySelectorAll('.review-card').forEach(function (card, index) {
     card.style.transitionDelay = (index * 0.08) + 's';
   });
+
+  function copyEmailFallback(text) {
+    const textarea = document.createElement('textarea');
+    textarea.value = text;
+    textarea.setAttribute('readonly', '');
+    textarea.style.position = 'absolute';
+    textarea.style.left = '-9999px';
+    document.body.appendChild(textarea);
+    textarea.select();
+    let success = false;
+    try {
+      success = document.execCommand('copy');
+    } catch (err) {
+      success = false;
+    }
+    document.body.removeChild(textarea);
+    return success;
+  }
+
+  function copyEmailToClipboard(text) {
+    if (navigator.clipboard && typeof navigator.clipboard.writeText === 'function') {
+      return navigator.clipboard.writeText(text).then(function () {
+        return true;
+      }).catch(function () {
+        return copyEmailFallback(text);
+      });
+    }
+    return Promise.resolve(copyEmailFallback(text));
+  }
+
+  document.querySelectorAll('.store-email-copy').forEach(function (button) {
+    button.addEventListener('click', function () {
+      const email = button.getAttribute('data-email');
+      if (!email) {
+        return;
+      }
+
+      const originalLabel = button.textContent;
+
+      copyEmailToClipboard(email).then(function (success) {
+        if (!success) {
+          return;
+        }
+        button.textContent = '¡Copiado!';
+        button.setAttribute('aria-live', 'polite');
+        window.setTimeout(function () {
+          button.textContent = originalLabel;
+        }, 2000);
+      });
+    });
+  });
 })();
