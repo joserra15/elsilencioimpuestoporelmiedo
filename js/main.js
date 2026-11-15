@@ -88,8 +88,8 @@
   window.addEventListener('scroll', updateActiveLink, { passive: true });
 
   const fadeElements = document.querySelectorAll(
-    '.section-header, .book-layout, .presentation-layout, .dedication, .purchase-card, .stores-list, .media-list, .media-photos, .author-content, .review-card'
-  );
+    '.section-header, .book-layout, .umbrales-layout, .presentation-layout, .dedication, .purchase-card, .stores-list, .media-list, .media-photos, .author-content, .review-card'
+  )
 
   fadeElements.forEach(function (el) {
     el.classList.add('fade-in');
